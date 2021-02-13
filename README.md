@@ -2,8 +2,10 @@
 VDX Assignment 13th Feb
 
 
-Assumptions:
+Note:
 
-All packages are imported for java.
+1. Run KeyValueStore.java to see store running from main method.
+2. JUnit package required for KeyValueStoreUnitTest.java (sample unit test)
+3. Added get, put, average, threadsafe map, handled exception in file write.
 
 

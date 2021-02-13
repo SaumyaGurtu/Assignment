@@ -13,6 +13,7 @@ public class KeyValueStore {
     private Double avgTotalValue = 0.0;
     private Double avgTotalKeys = 0.0;
     
+    // ConcurrentHashMap for thread safety
     // key, value pair
     private Map<String, Integer> keyValueMap = new ConcurrentHashMap<>();
     
@@ -71,7 +72,7 @@ public class KeyValueStore {
     
     private void writeExpiredKeyToStore(String key, Integer value){
         try {
-            // currently write only to a local file
+            // currently append only to a local existing file.s
             String str = key + "->" + String.valueOf(value);
             BufferedWriter writer = new BufferedWriter(new FileWriter(EXPIRED_KEY_VALUE_STORE, true));
             writer.write(str);
