@@ -72,7 +72,7 @@ public class KeyValueStore {
     
     private void writeExpiredKeyToStore(String key, Integer value){
         try {
-            // currently append only to a local existing file.s
+            // currently append only to a local existing file.
             String str = key + "->" + String.valueOf(value);
             BufferedWriter writer = new BufferedWriter(new FileWriter(EXPIRED_KEY_VALUE_STORE, true));
             writer.write(str);
